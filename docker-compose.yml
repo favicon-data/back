@@ -1,0 +1,31 @@
+services:
+  backend:
+    image: my-app:latest
+    build:
+      context: .
+    container_name: backend-container
+    ports:
+      - "8082:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_REDIS_HOST=redis
+      - SPRING_REDIS_PORT=6379
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine
+    container_name: redis-container
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - backend-network
+
+volumes:
+  redis-data:
+
+networks:
+  backend-network:
+    driver: bridge
