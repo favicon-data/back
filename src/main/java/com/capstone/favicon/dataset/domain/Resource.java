@@ -21,13 +21,24 @@ public class Resource {
     private String resourceName;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "resource_type", nullable = false)
+    @Column(name = "resource_type", nullable = true)
     private FileExtension type;
 
     @Column(name = "resource_url", nullable = false)
     private String resourceUrl;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "dataset_id", referencedColumnName = "dataset_id", nullable = false) // FK
     private Dataset dataset;
+
+    // 생성자 추가 (Dataset, resourceName, type, resourceUrl)
+    public Resource(Dataset dataset, String resourceName, FileExtension type, String resourceUrl) {
+        this.dataset = dataset;
+        this.resourceName = resourceName;
+        this.type = type;
+        this.resourceUrl = resourceUrl;
+    }
+
+    // 기본 생성자
+    public Resource() {}
 }
