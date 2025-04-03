@@ -10,7 +10,7 @@ public class MetadataParser {
     public static DatasetMetadata extractMetadata(String fileName, List<DatasetTheme> themes) {
         String[] parts = fileName.split("_");
 
-        if (parts.length < 3) { // 최소 3개의 요소 필요
+        if (parts.length < 3) {
             throw new IllegalArgumentException("파일명 형식이 올바르지 않습니다: " + fileName);
         }
 
