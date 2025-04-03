@@ -16,7 +16,7 @@ public class MetadataParser {
 
         String themeName = parts[0];
         String datasetName = parts[1];
-        String organization = parts[parts.length - 1]; // 마지막 부분을 organization으로 사용
+        String organization = parts[parts.length - 1];
         String type = extractFileType(fileName);
 
         Long datasetThemeId = themes.stream()
@@ -31,7 +31,7 @@ public class MetadataParser {
     private static String extractFileType(String fileName) {
         int lastDotIndex = fileName.lastIndexOf(".");
         if (lastDotIndex == -1 || lastDotIndex == fileName.length() - 1) {
-            return "UNKNOWN"; // 확장자가 없는 경우 기본값 설정
+            return "UNKNOWN";
         }
         return fileName.substring(lastDotIndex + 1).toUpperCase();
     }
