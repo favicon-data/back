@@ -10,8 +10,7 @@ import lombok.Setter;
 @Setter
 public class Region {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "region_name", nullable = false)
+    @Column(name = "region_name")
     private String regionName;
 
 }

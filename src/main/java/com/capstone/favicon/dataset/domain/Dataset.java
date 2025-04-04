@@ -31,14 +31,13 @@ public class Dataset {
     private String license;
     private String keyword;
     private Boolean analysis;
+
+    @Column(name = "name")
     private String name;
 
     @ManyToOne
     @JoinColumn(name = "dataset_theme_id", nullable = false)
     private DatasetTheme datasetTheme;
-
-    @Column(name = "name")
-    private String name;
 
     public Dataset(DatasetTheme datasetTheme, String name, String title, String organization) {
         this.datasetTheme = datasetTheme; // datasetTheme 객체를 설정
