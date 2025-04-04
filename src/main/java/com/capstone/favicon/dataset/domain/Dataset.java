@@ -1,12 +1,10 @@
 package com.capstone.favicon.dataset.domain;
 
-import com.capstone.favicon.download.domain.Download;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
-import com.capstone.favicon.dataset.domain.DatasetTheme;
 
 import java.time.LocalDate;
 import java.util.Set;
