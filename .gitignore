@@ -1,6 +1,6 @@
-#Ignore security and cors configuration files
-src/main/java/com/capstone/favicon/config/CorsConfig.java
-src/main/java/com/capstone/favicon/config/SecurityConfig.java
+# Ignore security and cors configuration files
+/src/main/java/com/capstone/favicon/config/SecurityConfig.java
+/src/main/java/com/capstone/favicon/config/CorsConfig.java
 
 HELP.md
 .gradle

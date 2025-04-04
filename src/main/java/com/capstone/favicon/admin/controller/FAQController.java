@@ -1,5 +1,6 @@
 package com.capstone.favicon.admin.controller;
 
+import com.capstone.favicon.admin.application.NoticeServiceImpl;
 import com.capstone.favicon.admin.dto.FAQRequestDto;
 import com.capstone.favicon.admin.application.FAQServiceImpl;
 import com.capstone.favicon.admin.dto.FAQResponseDto;

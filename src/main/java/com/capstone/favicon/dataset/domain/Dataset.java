@@ -37,6 +37,9 @@ public class Dataset {
     @JoinColumn(name = "dataset_theme_id", nullable = false)
     private DatasetTheme datasetTheme;
 
+    @Column(name = "name")
+    private String name;
+
     public Dataset(DatasetTheme datasetTheme, String name, String title, String organization) {
         this.datasetTheme = datasetTheme; // datasetTheme 객체를 설정
         this.name = name;

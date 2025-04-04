@@ -17,6 +17,9 @@ public interface DatasetRepository extends JpaRepository<Dataset, Long> {
     List<Dataset> findByDatasetTheme_DatasetThemeId(Long datasetThemeId);
     Optional<Dataset> findByDatasetThemeAndNameAndOrganization(DatasetTheme datasetTheme, String name, String organization);
 
+    @Query("SELECT d FROM Dataset d JOIN FETCH d.datasetTheme")
+    List<Dataset> findAllWithTheme();
+
     @Query(value = """
     SELECT * FROM dataset
     WHERE title ILIKE CONCAT('%', :keyword, '%') OR description ILIKE CONCAT('%', :keyword, '%')

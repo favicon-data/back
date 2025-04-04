@@ -31,7 +31,6 @@ public class Resource {
     @JoinColumn(name = "dataset_id", referencedColumnName = "dataset_id", nullable = false) // FK
     private Dataset dataset;
 
-    // 생성자 추가 (Dataset, resourceName, type, resourceUrl)
     public Resource(Dataset dataset, String resourceName, FileExtension type, String resourceUrl) {
         this.dataset = dataset;
         this.resourceName = resourceName;
@@ -39,6 +38,5 @@ public class Resource {
         this.resourceUrl = resourceUrl;
     }
 
-    // 기본 생성자
     public Resource() {}
 }
