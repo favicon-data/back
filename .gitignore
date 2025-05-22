@@ -57,3 +57,5 @@ requirement.txt
 venv
 ubuntu@ec2-54-180-238-119.ap-northeast-2.compute.amazonaws.com
 python
+
+src/main/resources/analysis.py

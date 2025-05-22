@@ -41,7 +41,8 @@ public class AnalysisServiceImpl implements AnalysisService {
                     requestDto.getTheme2(),
                     requestDto.getRegion(),
                     requestDto.getStart().toString(),
-                    requestDto.getEnd().toString()
+                    requestDto.getEnd().toString(),
+                    requestDto.getGraph()
             );
 
             pb.redirectErrorStream(true);

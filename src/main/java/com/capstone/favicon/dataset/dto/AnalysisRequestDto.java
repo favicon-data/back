@@ -11,5 +11,6 @@ public class AnalysisRequestDto {
     private String region;
     private String start;
     private String end;
+    private String graph;
 
 }
